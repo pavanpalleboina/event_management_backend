@@ -9,7 +9,10 @@ const app = express();
 const PORT = 5000
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173'}));
+app.use(cors({
+  origin: "https://merneventmanagement.vercel.app/",
+  credentials: true
+}));
 
 
 app.use('/api/user', require('./routes/userRoutes'));
